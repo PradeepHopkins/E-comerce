@@ -16,34 +16,29 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class PurchaseSteps {
-	
-	HomePage homePage     = new HomePage(DriverFactory.getDriver());
+
+	HomePage homePage = new HomePage(DriverFactory.getDriver());
 	SearchPage searchPage = new SearchPage(DriverFactory.getDriver());
 	ProductPage productPage = new ProductPage(DriverFactory.getDriver());
 	ShoppingCart shoppingCart = new ShoppingCart(DriverFactory.getDriver());
 	LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 	CheckOut checkOut = new CheckOut(DriverFactory.getDriver());
 
-	@Given("the user is on the Home page")
-	public void the_user_is_on_the_home_page() {
-
-	}
-
-	@When("user search the product {string}")
+	@Given("User search the product {string}")
 	public void user_search_the_product(String product) {
 
 		homePage.doSearch(product);
 
 	}
 
-	@When("user select the product")
+	@When("User select the product")
 	public void user_select_the_product() {
 
 		searchPage.doSelectProduct();
 
 	}
 
-	@When("Click add to cart")
+	@When("Navigate to add to cart")
 	public void click_add_to_cart() {
 
 		productPage.doAddToCart();
@@ -58,16 +53,15 @@ public class PurchaseSteps {
 
 	}
 
-	@When("Click proceed to checkout")
+	@When("User proceed to checkout")
 	public void click_proceed_to_checkout() {
 
 		shoppingCart.doCheckOut();
 
 	}
 
-	@When("User enters username {string} and password {string} and click login")
-	public void user_enters_username_and_password_and_click_login(String username, String password) {
-
+	@When("User logon {string},{string}")
+	public void user_logon(String username, String password) {
 		loginPage.doLogin(username, password);
 
 	}

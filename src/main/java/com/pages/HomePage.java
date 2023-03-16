@@ -7,9 +7,10 @@ import com.util.ElementUtil;
 
 public class HomePage extends ElementUtil{
 	
-
+    private WebDriver driver; 
 	public HomePage(WebDriver driver) {
 		super(driver);
+		this.driver=driver;
 	}
     
 	private By text_search     = By.xpath("//input[@name='search']");

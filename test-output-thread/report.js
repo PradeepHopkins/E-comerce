@@ -1,14 +1,14 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "f1790785-ef3b-4c3f-9017-71c78cfe92dc",
+    "id": "b92ac442-f573-4526-b24b-bdbf77693b70",
     "feature": "Buy Order Functionality",
     "scenario": "user Purchase the product",
-    "start": 1678955491732,
+    "start": 1678961079221,
     "group": 1,
     "content": "",
     "tags": "",
-    "end": 1678955507227,
+    "end": 1678961079368,
     "className": "passed"
   }
 ]);
